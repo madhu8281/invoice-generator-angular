@@ -1,0 +1,144 @@
+<div class="container">
+
+<h1>Invoice Generator</h1>
+
+<!-- FORM -->
+
+<div *ngIf="!showInvoice" class="form-card">
+
+<h2>Customer Details</h2>
+
+<input type="text" placeholder="Customer Name" [(ngModel)]="customer.name">
+<input type="text" placeholder="Customer Email" [(ngModel)]="customer.email">
+<input type="text" placeholder="Customer Address" [(ngModel)]="customer.address">
+
+<h2>Items</h2>
+
+<table class="form-table">
+
+<tr>
+<th>Product</th>
+<th>Price</th>
+<th>Qty</th>
+</tr>
+
+<tr *ngFor="let item of items">
+
+<td>
+<input type="text" [(ngModel)]="item.product">
+</td>
+
+<td>
+<input type="number" [(ngModel)]="item.price">
+</td>
+
+<td>
+<input type="number" [(ngModel)]="item.qty">
+</td>
+
+</tr>
+
+</table>
+
+<button class="add-btn" (click)="addItem()">Add Item</button>
+
+<h2>Description</h2>
+
+<textarea [(ngModel)]="description"
+placeholder="Add notes or bullet points"></textarea>
+
+<button class="generate-btn"
+(click)="generateInvoice()">
+Preview Invoice
+</button>
+
+</div>
+
+<!-- INVOICE PREVIEW -->
+
+<div *ngIf="showInvoice">
+
+<div #invoiceArea class="invoice">
+
+<div class="invoice-header">
+
+<div>
+<h2>Chiefex Technology Pvt Ltd</h2>
+<p>Mumbai, India</p>
+<p>support&#64;chiefex.com</p>
+</div>
+
+<div class="invoice-meta">
+<p><b>Invoice No:</b> {{invoiceNumber}}</p>
+<p><b>Date:</b> {{today}}</p>
+</div>
+
+</div>
+
+<hr>
+
+<div class="customer">
+
+<h3>Bill To</h3>
+
+<p>{{customer.name}}</p>
+<p>{{customer.email}}</p>
+<p>{{customer.address}}</p>
+
+</div>
+
+<table class="invoice-table">
+
+<tr>
+<th>Product</th>
+<th>Price</th>
+<th>Qty</th>
+<th>Total</th>
+</tr>
+
+<tr *ngFor="let item of items">
+
+<td>{{item.product}}</td>
+<td>{{formatCurrency(item.price)}}</td>
+<td>{{item.qty}}</td>
+<td>{{formatCurrency(item.price * item.qty)}}</td>
+
+</tr>
+
+</table>
+
+<div class="total-section">
+
+<p>Subtotal : {{formatCurrency(getSubtotal())}}</p>
+
+<p>GST ({{gstRate}}%) : {{formatCurrency(getGST())}}</p>
+
+<h2>Grand Total : {{formatCurrency(getGrandTotal())}}</h2>
+
+</div>
+
+<div *ngIf="description" class="description">
+
+<h3>Description</h3>
+
+<p>{{description}}</p>
+
+</div>
+
+</div>
+
+<div class="actions">
+
+<button class="edit-btn" (click)="showInvoice=false">
+Edit
+</button>
+
+<button class="download-btn" (click)="downloadPDF()">
+Download PDF
+</button>
+
+</div>
+
+</div>
+
+</div>

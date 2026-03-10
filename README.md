@@ -1,59 +1,152 @@
-# InvoiceGenerator
+# Invoice Generator App (Angular)
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.22.
+A professional **Invoice Generator Web Application** built using **Angular**.
+The application allows users to create invoices dynamically by entering customer and product details, preview the invoice in a professional format, and download it as a **PDF document**.
 
-## Development server
+This project was built as part of an **Angular Developer Intern assignment**.
 
-To start a local development server, run:
+---
+
+## Features
+
+* Create professional invoices dynamically
+* Add customer details (Name, Email, Address)
+* Add multiple products/services
+* Automatic **price × quantity calculation**
+* **Grand total calculation**
+* Unique **Invoice Number generation**
+* Invoice **preview before download**
+* Download invoice as **PDF**
+* Professional **grey, white, black & red invoice theme**
+* Fully **responsive design (mobile, tablet, desktop)**
+* Clean **shadow-free PDF output**
+
+---
+
+## Invoice Details Included
+
+The generated invoice contains:
+
+* Company Information
+* Unique Invoice Number
+* Invoice Date
+* Customer Details
+* Product / Service List
+* Price, Quantity, Amount
+* Grand Total
+* Additional Notes / Description
+* Company Contact Information
+
+---
+
+## 🛠 Technologies Used
+
+* **Angular**
+* **TypeScript**
+* **HTML5**
+* **CSS3 (Flexbox for responsiveness)**
+* **html2canvas**
+* **jsPDF**
+
+---
+
+## Project Structure
+
+```
+src
+ ┣ app
+ ┃ ┣ invoice
+ ┃ ┃ ┣ invoice.component.ts
+ ┃ ┃ ┣ invoice.component.html
+ ┃ ┃ ┗ invoice.component.css
+ ┃ ┣ app.component.ts
+ ┃ ┗ app.module.ts
+ ┗ assets
+```
+
+---
+
+## Installation & Setup
+
+1. Clone the repository
+
+```bash
+git clone https://github.com/yourusername/invoice-generator-angular.git
+```
+
+2. Navigate to the project folder
+
+```bash
+cd invoice-generator-angular
+```
+
+3. Install dependencies
+
+```bash
+npm install
+```
+
+4. Install PDF libraries
+
+```bash
+npm install jspdf html2canvas
+```
+
+5. Run the project
 
 ```bash
 ng serve
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+6. Open in browser
 
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
+```
+http://localhost:4200
 ```
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+---
 
-```bash
-ng generate --help
-```
+## How It Works
 
-## Building
+1. Enter customer details
+2. Add product/service details
+3. The system automatically calculates totals
+4. Click **Generate Invoice**
+5. Preview the professional invoice
+6. Click **Download PDF**
 
-To build the project run:
+---
 
-```bash
-ng build
-```
+## Responsive Design
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+The invoice layout is built using **Flexbox** and adapts to:
 
-## Running unit tests
+* Desktop
+* Tablet
+* Mobile devices
 
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+---
 
-```bash
-ng test
-```
+## Example Company Used
 
-## Running end-to-end tests
+**Chiefex Technology Pvt Ltd**
 
-For end-to-end (e2e) testing, run:
+Support Email: [support@chiefex.com](mailto:support@chiefex.com)
 
-```bash
-ng e2e
-```
+---
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+## Future Improvements
 
-## Additional Resources
+* GST / Tax calculation
+* Invoice history storage
+* Editable company details
+* Invoice logo upload
+* Database integration
+* Multi-currency support
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+---
+
+## 👩‍💻 Author
+
+**Madhavi Lokhande**
+
