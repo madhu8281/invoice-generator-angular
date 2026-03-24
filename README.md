@@ -3,7 +3,9 @@
 A professional **Invoice Generator Web Application** built using **Angular**.
 The application allows users to create invoices dynamically by entering customer and product details, preview the invoice in a professional format, and download it as a **PDF document**.
 
-This project was built as part of an **Angular Developer Intern assignment**.
+## Live Site
+
+> Deployed via Netlify — https://invoice-generator-angular.netlify.app/
 
 ---
 
@@ -134,15 +136,6 @@ The invoice layout is built using **Flexbox** and adapts to:
 Support Email: [support@chiefex.com](mailto:support@chiefex.com)
 
 ---
-
-## Future Improvements
-
-* GST / Tax calculation
-* Invoice history storage
-* Editable company details
-* Invoice logo upload
-* Database integration
-* Multi-currency support
 
 ---
 
