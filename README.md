@@ -39,7 +39,7 @@ The generated invoice contains:
 
 ---
 
-## 🛠 Technologies Used
+## Technologies Used
 
 * **Angular**
 * **TypeScript**
@@ -146,7 +146,7 @@ Support Email: [support@chiefex.com](mailto:support@chiefex.com)
 
 ---
 
-## 👩‍💻 Author
+## Author
 
 **Madhavi Lokhande**
 
